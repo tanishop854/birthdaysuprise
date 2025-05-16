@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <h1>Happy Birthday!</h1>
+        <img src="cake.jpg" alt="Birthday Cake" style="max-width: 90%; height: auto;">
+    </div>
+    <audio id="birthdaySong" autoplay>
+        <source src="happy_birthday.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        window.onload = () => {
+            const song = document.getElementById("birthdaySong");
+            song.play().catch((e) => {
+                console.log("Autoplay prevented. Tap screen to play music.");
+            });
+        };
+    </script>
+</body>
+</html>

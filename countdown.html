@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        let count = 3;
+        function updateCountdown() {
+            if (count > 0) {
+                document.getElementById("count").textContent = count--;
+                setTimeout(updateCountdown, 1000);
+            } else {
+                window.location.href = "surprise.html";
+            }
+        }
+        window.onload = updateCountdown;
+    </script>
+</head>
+<body>
+    <div class="center">
+        <h1 id="count">3</h1>
+    </div>
+</body>
+</html>
